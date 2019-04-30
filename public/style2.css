@@ -10,7 +10,7 @@
 
 html {
   font-family: 'Montserrat', sans-serif;
-  color: #555;
+  color: #222;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   background-color: rgb(245, 245, 245);
@@ -258,7 +258,7 @@ h1 .tech {
   text-align: center;
   line-height: 145%;
   letter-spacing: 1px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 
