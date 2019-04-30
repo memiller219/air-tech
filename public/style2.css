@@ -1,5 +1,3 @@
-/*----- Basic Setup ------*/
-
 * {
   margin: 0;
   padding: 0;
@@ -11,23 +9,26 @@
 }
 
 html {
+  font-family: 'Montserrat', sans-serif;
   color: #555;
-  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-size: 18px;
   background-color: rgb(245, 245, 245);
+  
 }
 
-/*---- Header -------*/
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("./img/sands.JPG");
-  background-size: cover;
-  height: 100vh;
-  background-position: center;
-  background-attachment: fixed;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
 }
 
 nav {
@@ -39,8 +40,12 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  padding: 20px 10px;
+  padding: 10px;
   justify-content: space-around;
+}
+
+nav ul li {
+    padding: 10px 0;
 }
 
 nav ul li a {
@@ -49,12 +54,18 @@ nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 300;
+  padding: 10px;
 }
 
 nav ul li a:hover {
   border-bottom: 1px solid rgba(190, 190, 190, 0.562);
   color: rgb(167, 167, 167);
   transition: border-bottom 0.3s, color 0.3s;
+}
+
+.banner {
+    width: 100% !important;
+
 }
 
 /*----- Sticky Nav ---------*/
@@ -64,7 +75,7 @@ nav ul li a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.973);
+  background-color: rgba(250, 250, 250, 0.9);
   z-index: 9999;
   box-shadow: 0 2px 2px rgba(44, 62, 80, 0.603);
   transition: background-color 0.5s;
@@ -72,19 +83,33 @@ nav ul li a:hover {
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
-  padding: 4px 0;
+  padding: 4px;
   color: #555;
 }
+
+.sticky .mobile-nav-icon {
+    color: #2c3e50;
+  }
+  
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    border: 0;
+    font-size: 1rem;
+  }
+  
+  .sticky .main-nav li a:hover {
+      color: rgb(44, 62, 80);
+      font-weight: 400;
+  }
 
 /*------ Mobile Nav -------*/
 
 .mobile-nav-icon {
   float: right;
-  padding: 10px;
-  margin: 30px;
+  padding: 2px;
+  margin: 10px;
   cursor: pointer;
   color: #fff;
-  display: none;
 }
 
 .banner {
@@ -92,16 +117,18 @@ nav ul li a:hover {
   flex-flow: column;
   align-items: center;
   padding-top: 50px;
+  margin-top: 190px;
+  
 }
 
 .welcome h2 {
   color: rgb(223, 223, 223);
   font-weight: 200;
   text-transform: uppercase;
-  font-size: 30px;
-  display: block;
-  margin-top: 150px;
+  margin-bottom: -20px;
 }
+
+
 
 h1 .air,
 h1 .tech {
@@ -112,29 +139,41 @@ h1 .tech {
 h1 .air {
   color: #fff;
   font-weight: 100;
-  font-size: 6rem;
+  font-size: 4rem;
   text-transform: uppercase;
 }
 
 h1 .tech {
   color: rgb(168, 168, 168);
   font-weight: 400;
-  font-size: 6rem;
+  font-size: 4rem;
   text-transform: uppercase;
 }
 
 .heat_air h4 {
   color: #fff;
   font-weight: 100;
-  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 8px;
   word-spacing: 10px;
 }
 
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    float: left !important;
+}
+
+.main-nav {
+    display: none;
+}
+
+
 /*----- Services -----*/
 .services {
   width: 100%;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .row {
@@ -147,64 +186,53 @@ h1 .tech {
 .row__text {
   border-bottom: 1px solid rgb(179, 179, 179);
   margin: auto;
+  margin-bottom: 40px;
 }
 
-.row__text h3 {
-  font-size: 2rem;
+.row__text {
+  font-size: 1.5rem; 
   font-weight: 100;
   text-transform: uppercase;
+}
+
+.box i {
+    color: #2c3e50;
 }
 
 .box__row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 50px;
+  flex-direction: column;
   padding-bottom: 50px;
 }
 
-.box__row .box {
+ .box {
   background-color: rgb(238, 238, 238);
-  width: 300px;
-  margin: 30px 20px;
+  width: 75%;
   padding: 10px;
   border-radius: 2px;
   box-shadow: 1px 1px 4px rgb(105, 105, 105);
   text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
-.box p {
-  text-align: left;
-  margin-top: 20px;
-}
-.box h4 {
+.type {
   color: #2c3e50;
-  font-weight: 200;
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
-.box i {
-  color: #2c3e50;
-  margin-top: 10px;
+.box .type p {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 10px 0;
+    
 }
 
-.btn {
-  background-color: rgb(238, 238, 238);
-  border: none;
-  color: #2c3e50;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 100;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 10px;
+.services .box__row .box {
+    padding: 30px !important;
 }
 
-.btn #right {
-  padding-left: 5px;
-  margin-left: 5px;
-}
 
 /*----- Quality Section -----*/
 
@@ -218,114 +246,42 @@ h1 .tech {
     url("./img/amanabw.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   color: white;
 }
 
+.quality {
+    font-size: 1.3rem;
+}
+
 .bio__text {
-  float: left;
-  padding: 200px 50px 0px 80px;
-  width: 50%;
+    padding: 120px 40px;
+  text-align: center;
   line-height: 145%;
-  font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: 100;
 }
 
-/*----- Meet the team -----*/
-
-.team {
-  background-color: rgb(245, 245, 245);
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.col {
-  float: left;
-  max-width: 450px;
-  margin-bottom: 16px;
-  padding: 50px 30px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.title {
-  color: gray;
-  padding: 5px 0;
-}
-
-.info {
-  padding: 0 16px;
-  background-color: #fff;
-  padding: 10px;
-}
-
-.info p {
-  line-height: 140%;
-  padding-top: 10px;
-}
-
-.info h2 {
-  font-size: 1.5rem;
-  font-weight: 200;
-  padding-bottom: 5px;
-  color: #2c3e50;
-}
-
-.info::after,
-.rows::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.card img {
-  width: 100%;
-  height: 500px;
-  box-shadow: 0 1px 1px rgba(85, 85, 85, 0.329);
-}
 
 /*----- Contact -----*/
 
 .contact {
   height: 300px;
   background-color: rgb(233, 233, 233);
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+  margin: auto;
 }
 
-#contact__info {
-  padding-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+#contact__info p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
 }
 
-.phone .number {
-  text-align: center;
-}
-
-.mail .address {
-  text-align: center;
-}
-
-.phone .number h3,
-.mail .address h3 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-.phone .number p,
-.mail .address p {
+.number {
   font-size: 2rem;
   color: #2c3e50;
 }
 
-/*--------------- Footer --------------*/
 
 footer {
   height: 30px;
@@ -333,8 +289,8 @@ footer {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 5px;
   font-size: 80%;
+  margin: auto;
 }
 
 /*--------- Animations ------------*/
@@ -362,7 +318,7 @@ footer {
 }
 
 .js--wp-2 {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 .js--wp-3 {
   animation-delay: 1.3s;
@@ -375,3 +331,4 @@ footer {
 .js--wp-8 {
   animation-delay: 1s;
 }
+

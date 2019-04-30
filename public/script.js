@@ -7,7 +7,7 @@ $(document).ready(function() {
       } else {
         $("nav").removeClass("sticky");
       }
-    },
+    }, 
     {
       offset: "2%"
     }

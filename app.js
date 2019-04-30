@@ -16,6 +16,6 @@ var $ = require("jquery")(window);
 
 
 app.listen(process.env.PORT, process.env.IP, function() {
-    console.log('our app is running');
+    console.log('the app is running');
 });
 

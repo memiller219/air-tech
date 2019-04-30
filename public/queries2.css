@@ -1,0 +1,54 @@
+/*iphoneX 375 x 812
+  ipad 768 x 1024
+  ipadpro 1024 x 1366
+*/
+
+@media screen and (min-height: 1024px) {
+    .banner {
+        padding-top: 200px;
+    }
+    .welcome h2, 
+    .heat_air {
+        font-size: 2.4rem;
+    }
+    
+    h1 .air, 
+    h1 .tech {
+        font-size: 5.5rem;
+    }
+}
+
+@media screen and (min-height: 1366px), (min-width: 1024px) {
+    .banner {
+        padding-top: 280px;
+    }
+    .welcome h2,
+    .heat_air {
+        font-size: 3.5rem !important;
+    }
+    h1 .air, 
+    h1 .tech {
+        font-size: 7rem !important;
+    }
+}
+
+
+
+
+@media screen and (min-width: 769px) {
+    .mobile-nav-icon { display: none; }
+    
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .welcome h2, 
+    .heat_air {
+        font-size: 2rem;
+    }
+    
+    h1 .air, 
+    h1 .tech {
+        font-size: 5rem;
+    }
+}
